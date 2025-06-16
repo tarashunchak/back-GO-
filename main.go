@@ -76,7 +76,7 @@ func main() {
 	if err != nil {
 		fmt.Print("Error to connect")
 	}
-	http.HandleFunc(":/ws", handleConnections)
+	http.HandleFunc("/ws", handleConnections)
 	http.ListenAndServe(":8080", nil)
 	check_new_messages(db)
 }
